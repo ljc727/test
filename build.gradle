@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp' 
+ 
+version = '1.0'
+ 
+// Uses JDK 7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+ 
+ 
+// 1. Get dependencies from Maven local repository
+// 2. Get dependencies from Maven central repository
+repositories {
+	mavenLocal()
+    mavenCentral()
+}
+ 
+//Project dependencies
+dependencies {
+	compile 'ch.qos.logback:logback-classic:1.1.2'
+	compile 'org.lazyluke:log4jdbc-remix:0.2.7' // 로그 정렬
+	compile 'jstl:jstl:1.2'
+	compile 'commons-dbcp:commons-dbcp:1.2.2'
+	compile 'org.mybatis:mybatis:3.2.2'
+	compile 'org.jumpmind.symmetric.jdbc:mariadb-java-client:1.1.1'
+	compile 'org.mybatis:mybatis-spring:1.2.0'
+	compile 'org.springframework:spring-tx:2.5.4'
+	compile 'org.springframework:spring-jdbc:4.0.6.RELEASE'
+	compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+	compile 'com.navercorp.lucy:lucy-xss:1.6.3'
+	compile 'com.googlecode.json-simple:json-simple:1.1' // json
+	
+	
+        
+	//include in compile only, exclude in the war
+	providedCompile 'javax.servlet:servlet-api:2.5'
+}
