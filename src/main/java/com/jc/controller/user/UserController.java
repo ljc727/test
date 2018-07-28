@@ -37,7 +37,7 @@ public class UserController {
 			
 
 			jArr.add(obj1);
-			System.out.println("11");
+			System.out.println("112");
 			
 			model.addAttribute("data", jArr.toString());
 			
