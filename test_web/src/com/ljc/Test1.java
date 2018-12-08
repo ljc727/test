@@ -1,12 +1,9 @@
 package com.ljc;
 
-public class Test {
+public class Test1 {
 	public static void main(String[] args) {
-		System.out.println("2222");
-		System.out.println("11");
-		//test
-		
 		System.out.println();
 		
 	}
+
 }
